@@ -50,7 +50,7 @@
                 <th scope="col">length</th>
                 <th scope="col">width</th>
                 <th scope="col">height</th>
-                <th scope="col">Price</th>
+                <th scope="col"><span>Price</span><br><span id="price_sum" ></span></th>
             </tr>
             </thead>
             <tbody>
@@ -84,7 +84,7 @@
             init() {
                 setTimeout(() => {
                     let tfConfig = {
-                        base_path: '/assets-bs5/TableFilter7.3/dist/tablefilter/',
+                        base_path: '/tablefilter/',
                         col_0: 'input',
                         col_1: 'input',
                         col_2: 'select',
@@ -118,18 +118,18 @@
                             '< Show all >',
                             '< Show all >',
                         ],
-                        // extensions: [
-                        //     {
-                        //         name: 'sort' },
-                        //     {
-                        //         // minimal configuration for column operation extension
-                        //         name: 'colOps',
-                        //         col: [5,6,7],
-                        //         id: ['quantity_sum','picking_outstanding_sum','trolley_outstanding_sum'],
-                        //         operation: ['sum','sum','sum'],
-                        //         decimal_precision: [0,0,0]
-                        //     }
-                        // ],
+                        extensions: [
+                            {
+                                name: 'sort' },
+                            {
+                                // minimal configuration for column operation extension
+                                name: 'colOps',
+                                col: [9],
+                                id: ['price_sum'],
+                                operation: ['sum'],
+                                decimal_precision: [0]
+                            }
+                        ],
 
                     };
                     const tf = new TableFilter('table',tfConfig);
