@@ -137,17 +137,18 @@
                     tf.extension('colOps');
                     tf.init();
 
-
-                    const element = document.getElementById('dtmDispatchDateForCalendar');
+                    //
+                    const element = document.getElementById('delivery_date_for_calendar');
                     const dateValue = element.getAttribute('value');
                     flatpickr("#selector", {
                         dateFormat: "Y-m-d",
                         defaultDate: (dateValue ? dateValue : "today"),
+                        // defaultDate: "today",
                         "locale": {
                             "firstDayOfWeek": 1 // start week on Monday
                         },
-                        onClose: function(dtmDispatchDate) {
-                            @this.set('dtmDispatchDate',  this.formatDate(dtmDispatchDate[0], "Y-m-d"));
+                        onClose: function(delivery_date) {
+                            @this.set('delivery_date',  this.formatDate(delivery_date[0], "Y-m-d"));
                         },
                     });
 
