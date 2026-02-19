@@ -33,7 +33,7 @@ php artisan key:generate
 sail build --no-cache
 sail up -d
 sail shell
-php artisan migrate:fresh -seed
+php artisan migrate:fresh --seed
 ```
 | Login           | Password |
 |-----------------|----------|
