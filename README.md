@@ -34,6 +34,7 @@ sail build --no-cache
 sail up -d
 sail shell
 php artisan migrate:fresh --seed
+npm run dev
 ```
 | Login           | Password |
 |-----------------|----------|
